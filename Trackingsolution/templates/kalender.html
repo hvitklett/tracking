@@ -1,1 +1,60 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        /* Add CSS styles for better appearance */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Monthly Calendar</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Pseudocode to generate calendar days -->
+            <!-- Loop through weeks -->
+            FOR each week in the month
+                <tr>
+                    <!-- Loop through days in the week -->
+                    FOR each day in the week
+                        IF day is within the current month
+                            <td>Display day</td>
+                        ELSE
+                            <td class="other-month">Display empty or indicate another month</td>
+                        ENDIF
+                    ENDFOR
+                </tr>
+            ENDFOR
+        </tbody>
+    </table>
+
+</body>
+</html>
