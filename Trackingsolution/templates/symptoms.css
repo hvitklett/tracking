@@ -9,9 +9,10 @@ h1
 h2
 {
     text-align: left;
-    color: black;
+    color: #08566a;
     font-family: sans-serif;
     font-size: medium;
+    margin-top: 50px;
 }
 
 p
@@ -28,8 +29,8 @@ p
     min-height: 80px;
     min-width: 120px;
     font-size: xx-large;
-    margin-right: 15px;
-    margin-bottom: 50px;
+    margin-right: 8px;
+    margin-left: 8px;
     background-color:#DDE9EC;
     color: #08566a;
 
@@ -38,5 +39,13 @@ p
 .trackbutton:hover 
 {
     background-color:#7EAFBC;
-    transition: 0.7s;
+    transition: 0.07s;
+}
+
+.buttontext
+{
+    font-family: sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    font-size: small;
 }
