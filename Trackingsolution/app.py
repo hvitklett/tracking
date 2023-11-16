@@ -7,15 +7,15 @@ def index():
     return render_template("landingpage.html")
 
 @app.route("/seizures")
-def bye ():
+def bya ():
     return render_template("seizures.html") #return the template html file
 
 @app.route("/symptoms")
-def bye ():
+def byb ():
     return render_template("symptoms.html") 
 
 @app.route("/medicin")
-def bye ():
+def byc ():
     return render_template("medicin.html")
 
 @app.route("/kalender")
