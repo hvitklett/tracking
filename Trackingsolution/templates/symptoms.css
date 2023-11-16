@@ -1,0 +1,42 @@
+h1
+{
+    text-align: left;
+    color: #08566a;
+    font-family: sans-serif;
+    font-size: xx-large;
+}
+
+h2
+{
+    text-align: left;
+    color: black;
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+p
+{
+    font-family: sans-serif;
+    font-size: medium;
+    margin-bottom: 50px;
+}
+
+.trackbutton
+{
+    border: 1px solid #08566a;
+    border-radius: 5px;
+    min-height: 80px;
+    min-width: 120px;
+    font-size: xx-large;
+    margin-right: 15px;
+    margin-bottom: 50px;
+    background-color:#DDE9EC;
+    color: #08566a;
+
+}
+
+.trackbutton:hover 
+{
+    background-color:#7EAFBC;
+    transition: 0.7s;
+}
