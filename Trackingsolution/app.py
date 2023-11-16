@@ -7,19 +7,21 @@ def index():
     return render_template("landingpage.html")
 
 @app.route("/seizures")
-def bya ():
+def seizures ():
     return render_template("seizures.html") #return the template html file
 
 @app.route("/symptoms")
-def byb ():
+def symptoms ():
     return render_template("symptoms.html") 
 
 @app.route("/medicin")
-def byc ():
+def medicin ():
     return render_template("medicin.html")
 
 @app.route("/kalender")
-def html():
+def kalender():
     return render_template("kalender.html")
 
 #You run the web applicatiom by first going into the right directory, and then type flask run (not the folder name, but just flask everytime)
+
+#push
