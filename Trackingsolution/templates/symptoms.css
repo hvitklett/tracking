@@ -25,6 +25,36 @@ p
     margin-bottom: 50px;
 }
 
+/* Style for the date label text */
+label
+{
+    font-size: medium;
+    color: #08566a;
+    font-weight: bold; /* Add this line to make the text bold */
+    text-transform: uppercase; /* Add this line to make the text uppercase */
+    margin-right: 20px; 
+}
+
+/* Add styling for the date input */
+label input[type="date"]
+{
+    padding: 4px;
+    border: 1px solid #08566a;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Add styling for time input */
+label input[type="time"]
+{
+    padding: 3px;
+    border: 1px solid #08566a;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 .trackbutton
 {
     border: 1px solid #08566a;
