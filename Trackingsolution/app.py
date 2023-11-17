@@ -22,6 +22,6 @@ def medicin ():
 def kalender():
     return render_template("kalender.html")
 
-#You run the web applicatiom by first going into the right directory, and then type flask run (not the folder name, but just flask everytime)
+#You run the web application by first going into the right directory, and then type flask run (not the folder name, but just flask everytime)
 
 #push

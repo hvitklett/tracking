@@ -1,0 +1,32 @@
+*
+{
+    background-color: #F7FAFA;
+    font-family: sans-serif;
+}
+
+h1
+{
+    text-align: left;
+    color: #08566a;
+    font-size: xx-large;
+}
+
+h2
+{
+    text-align: left;
+    color: #08566a;
+    font-size: medium;
+    margin-top: 50px;
+}
+
+p
+{
+    font-size: medium;
+    margin-bottom: 50px;
+}
+
+th
+{
+    color: red
+}
+
