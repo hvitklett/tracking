@@ -11,10 +11,11 @@
             <p>Please track your seizures below. Click on the one that fits you the most right now</p>
 
             <!-- Date input -->
+
             <label for="date">Date:</label>
             <input type="date" id="date" onchange="updateElapsed()">
 
-            <!--Time input-->
+            <!--Time inputs-->
 
             <label for="start">Start:</label>
             <input type="time" id="start" onchange="updateElapsed()"> <!-- The onchange attribute is set to call the updateElapsed function whenever the input values change -->
@@ -30,41 +31,48 @@
             <div id="success"></div>
 
             <!-- JavaScript code -->
-<script>
-    // Initialize a variable 'elapsedseconds' to store elapsed time in -->
-    let elapsedSeconds = 0;
+    <script>
+        // Initialize a variable 'elapsedseconds' to store elapsed time in -->
+        let elapsedSeconds = 0;
 
-    // Function to update elapsed time.
-    // function is called whenever the start or stop time inputs change. It calculates the elapsed time, makes the format, and updates the display and hidden input
-    function updateElapsed()
-    {
-        // Get references to HTML elements
-        const dateInput = document.getElementById("date");
-        const startTimeInput = document.getElementById("startTime");
-        const stopTimeInput = document.getElementById("stopTime");
-        const elapsedTimeInput = document.getElementById("elapsedTimeInput");
-        const successMessage = document.getElementById("successMessage");
+        // Function to update elapsed time.
+        // function is called whenever the start or stop time inputs change. It calculates the elapsed time, makes the format, and updates the display and hidden input
+        function updateElapsed()
+        {
+            // Get references to HTML elements
+            const dateInput = document.getElementById("date");
+            const startTimeInput = document.getElementById("startTime");
+            const stopTimeInput = document.getElementById("stopTime");
+            const elapsedTimeInput = document.getElementById("elapsedTimeInput");
+            const successMessage = document.getElementById("successMessage");
 
-        // Combine date and time values
-        const combinedDateTimeString = dateInput.value + "T" + startTimeInput.value + ":00Z";
+            // Combine date and time values
+            const combinedDateTimeString = dateInput.value + "T" + startTimeInput.value + ":00Z";
 
-        // Create a Date object based on the combined date and time string
-        const combinedDateTime = new Date(combinedDateTimeString);
+            // Create a Date object based on the combined date and time string
+            //combinedDateTime are a combination of the values entered by the user in the input field
+            //The values are expected to be in the format. By doing so the time wont need another fixed date to make a Date object
+            const combinedDateTime = new Date(combinedDateTimeString);
 
-         // Calculate elapsed time in seconds
-         elapsedSeconds = (stopTime - combinedDateTime) / 1000;
+            // Calculate elapsed time in seconds
+            elapsedSeconds = (stopTime - combinedDateTime) / 1000;
+           
+            // Check if the input is valid (stop time is after start time)
 
-         if (elapsedSeconds >= 0) {  //If elapsedSeconds is greater than or equal to 0, it theres a vlid input
+            // Checks if the elapsed time is non-negative, meaning the stopTime is after the combinedDateTime (start time)
 
-        // Convert elapsed time to hours, minutes, and seconds
-        const elapsedMinutes = Math.floor(elapsedSeconds / 60) % 60;
-        const elapsedHours = Math.floor(elapsedSeconds / 3600);
+            if (elapsedSeconds >= 0) {  //If elapsedSeconds is greater than or equal to 0, it theres a vlid input
 
-        // Format the elapsed time into a string
-        const formattedTime = `${pad(elapsedHours)}:${pad(elapsedMinutes)}:${pad(Math.floor(elapsedSeconds) % 60)}`;
+                // Convert elapsed time to hours, minutes, and seconds
+                const elapsedMinutes = Math.floor(elapsedSeconds / 60) % 60;
+                const elapsedHours = Math.floor(elapsedSeconds / 3600);
 
-         // Display the formatted time in the success message div
-         successMessage.innerText = `Elapsed Time: ${formattedTime}`;
+                // Format the elapsed time into a string
+                const formattedTime = `${pad(elapsedHours)}:${pad(elapsedMinutes)}:${pad(Math.floor(elapsedSeconds) % 60)}`;
+
+
+                // Display the formatted time in the success message div
+                successMessage.innerText = `Elapsed Time: ${formattedTime}`;
                 // sets the text content of the "successMessage" element to "Elapsed Time: " followed by the value of formattedTime
                 // This way, user sees a message like "Elapsed Time: 00:00:00
 
@@ -111,11 +119,10 @@
                             <div class="buttontext">Tremors</div>
                         </td>
                     </tr>
-                    
+
 
                 </table>
             </div>
-            
             <h2>DEGREE OF SEVERITY</h2>
             <div>
                 <table>
@@ -139,7 +146,8 @@
                     </tr>
                 </table>
             </div>
-    
+
         </table>
+        <div><button id="Addtocalenderbutton">+ Add to calendar</button></div>
     </body>
 </html>
