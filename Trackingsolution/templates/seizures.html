@@ -41,10 +41,10 @@
         {
             // Get references to HTML elements
             const dateInput = document.getElementById("date");
-            const startTimeInput = document.getElementById("startTime");
-            const stopTimeInput = document.getElementById("stopTime");
+            const startTimeInput = document.getElementById("start");
+            const stopTimeInput = document.getElementById("stop");
             const elapsedTimeInput = document.getElementById("elapsedTimeInput");
-            const successMessage = document.getElementById("successMessage");
+            const successMessage = document.getElementById("success");
 
             // Combine date and time values
             const combinedDateTimeString = dateInput.value + "T" + startTimeInput.value + ":00Z";
@@ -54,8 +54,8 @@
             //The values are expected to be in the format. By doing so the time wont need another fixed date to make a Date object
             const combinedDateTime = new Date(combinedDateTimeString);
 
-            // Calculate elapsed time in seconds
-            elapsedSeconds = (stopTime - combinedDateTime) / 1000;
+            // Calculate elapsed time in seconds plus convert to new date object
+            elapsedSeconds = (new Date(stopTimeInput.value) - combinedDateTime) / 1000;
            
             // Check if the input is valid (stop time is after start time)
 
@@ -77,7 +77,7 @@
                 // This way, user sees a message like "Elapsed Time: 00:00:00
 
                 // Store elapsed time in the hidden input for further processing
-                elapsedTimeInput.value = elapsedseconds;
+                elapsedTimeInput.value = elapsedSeconds;
 
             }
             else
