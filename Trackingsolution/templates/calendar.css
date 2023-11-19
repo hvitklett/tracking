@@ -30,3 +30,9 @@ th
     color: red
 }
 
+.calender
+{
+    table-layout: fixed;
+    width: auto;
+    
+}
