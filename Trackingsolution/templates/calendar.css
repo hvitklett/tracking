@@ -30,9 +30,15 @@ th
     color: red
 }
 
-.calender
+.calendar-container table
 {
     table-layout: fixed;
     width: auto;
+    margin-left: 40%;
+    margin-right: auto;
+    border-spacing: 80px;
+
+    
+
     
 }
