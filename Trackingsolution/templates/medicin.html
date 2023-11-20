@@ -2,9 +2,95 @@
 
 <html lang="en">
     <head>
-        <title>blink</title>
-    </head>
-    <body>
-        Hello, world
-    </body>
-</html>
+        <title>Medicin</title>
+        <link rel="stylesheet" href="medicin.css">
+
+        <head>
+            <body>
+
+                    <h1>Your Medicin</h1>
+                    <p>Keep track on your medicin on this site.</p> <!-- Ændrer denne beskrivelse til noget bedre-->
+
+                <button class="alarmbutton" class="alarmbutton:hover">+ Add alarm</button>
+
+                <h2>Time of day</h2>
+                <p>Please select the time of day you want to be reminded of your medication:</p>
+<div class="select-time"> <!--select-elementet bruges til at lave en drop-down menu*-->
+    <select class="select-box">
+        <option value="">Select time</option>
+        <option value="1:00 am">1:00 a.m.</option>
+        <option value="2:00 am">2:00 a.m.</option>
+        <option value="3:00 am">3:00 a.m.</option>
+        <option value="4:00 am">4:00 a.m.</option>
+        <option value="5:00 am">5:00 a.m.</option>
+        <option value="6:00 am">6:00 a.m.</option>
+        <option value="7:00 am">7:00 a.m.</option>
+        <option value="8:00 am">8:00 a.m.</option>
+        <option value="9:00 am">9:00 a.m.</option>
+        <option value="10:00 am">10:00 a.m.</option>
+        <option value="11:00 am">11:00 a.m.</option>
+        <option value="12:00 am">12:00 a.m.</option>
+
+        <option value="1:00 pm">1:00 p.m.</option>
+        <option value="2:00 pm">2:00 p.m.</option>
+        <option value="3:00 pm">3:00 p.m.</option>
+        <option value="4:00 pm">4:00 p.m.</option>
+        <option value="5:00 pm">5:00 p.m.</option>
+        <option value="6:00 pm">6:00 p.m.</option>
+        <option value="7:00 pm">7:00 p.m.</option>
+        <option value="8:00 pm">8:00 p.m.</option>
+        <option value="9:00 pm">9:00 p.m.</option>
+        <option value="10:00 pm">10:00 p.m.</option>
+        <option value="11:00 pm">11:00 p.m.</option>
+        <option value="12:00 pm">12:00 p.m.</option>
+    </select>
+</div>
+
+<h2>Day(s) of the week</h2>
+<p>Please select the day(s) you want to be reminded of your medication:</p>
+
+<button class="alarmbutton" class="alarmbutton:hover">Monday</button>
+<button class="alarmbutton" class="alarmbutton:hover">Tuesday</button>
+<button class="alarmbutton" class="alarmbutton:hover">Wednesday</button>
+<button class="alarmbutton" class="alarmbutton:hover">Thursday</button>
+<button class="alarmbutton" class="alarmbutton:hover">Friday</button>
+<button class="alarmbutton" class="alarmbutton:hover">Saturday</button>
+<button class="alarmbutton" class="alarmbutton:hover">Sunday</button>
+
+<h2>Name of medicin</h2>
+<p>Please state the name of your medication:</p>
+<form>
+    <input type="text" class="submed">
+    <input type="submit" value="Submit medication" class="alarmbutton">
+</form>
+
+<h2>Overview of your medication alarms</h2>
+
+
+
+
+<div>
+    <table class="medoverview">
+        <tr>
+            <td>
+                <div>
+                    <h3>Every day</h3>
+                    <div>8:00 a.m.</div>
+            <td>
+                <div>
+                    <h4>Trimonil® Retard, Desitin</h4>
+                </div>
+            </td>
+        </tr>
+            <tr>
+            <td>
+                <div><h3>Wednesday</button></div>
+                <div>6:00 p.m.</div>
+            </td>
+                <td>
+                    <h4>Valproat "Life Medical", Life Medical ApS</h4>
+                </td>
+        </tr>
+    </table>
+</div>
+                </body>
