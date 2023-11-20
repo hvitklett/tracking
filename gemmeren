@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +9,6 @@
 </head>
 
 <body>
-    <iframe src="sidebar.html" width="250" height="100vh" style="position: fixed; top: 0; left: 0; border: none;"></iframe>
     <div class="calendar-container">
         <h1 div class="h1-2">Calendar</h1>
         <table>
@@ -79,3 +79,103 @@
 </body>
 
 </html>
+
+
+
+
+*
+{
+    background-color: lightgray;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0; /* Remove default body margin */
+}
+
+iframe {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+.h1-2
+{
+    text-align: right;
+    color: #08566a;
+    margin-bottom: 5%; 
+}
+
+
+.calendar-container {
+    margin-left: 250px; /* Adjust the margin to make space for the sidebar */
+    padding: 20px; /* Add some padding for better appearance */
+}
+.calendar-container h1, p
+{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+.calendar-container table
+{
+    text-align: center;
+    border: 5px solid #08566a;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: auto;
+}
+
+.calendar-container th
+{
+    border: 5px solid #0f0e0e;
+    background-color:darkgrey;
+    border-width: 1px;
+    padding: 5px;
+    text-align: center;
+    width: 40px; 
+    height: 40px;
+
+}
+
+
+
+.calendar-container td
+{
+    border: 2px solid  #08566a;
+    border-width: 2px;
+    padding: 25px;
+    text-align: center;
+    width: 50px; 
+    height: 50px; 
+}
+
+.calendar-container table thead tr:first-child th
+ {
+    border: 5px solid black;
+    background-color: #7EAFBC;
+    padding: 5px;
+    text-align: center;
+    border-bottom: none;
+} 
+.calendar-container td:hover {
+    background-color: #08566a;
+}
+
+
+.header
+{
+    width: 100%;
+    height: 100vh;
+    background: #F7FAFA;
+
+}
+
