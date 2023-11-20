@@ -10,12 +10,17 @@
     <body>
         <h1>Your overview</h1>
         <br />
-        <div class='seizures-container'style='position: relative; height: 15vh; width:30vw'>
+
+        <div class='seizures-container' style='position: relative; height: 15vh; width: 25%; float: right; margin-right: 20%;'>
             <canvas id='seizures' width='400' height='400'></canvas>
+        </div>
+
+        <div class='symptoms-container' style='position: relative; height: 15vh; width: 25%; float: left; margin-left: 20%;'>
+            <canvas id='symptoms' width='400' height='400'></canvas>
         </div>
         <script>
               // Sample data for the "Seizures" chart
-              const data = {
+              const seizuresData = {
                 labels: ['July', 'August', 'September', 'October', 'November', 'December'],
                 datasets: [{
                     label: 'Seizures',
@@ -26,16 +31,50 @@
                 }]
             };
     
-            const config = {
+            const seizuresConfig = {
                 type: 'line',
-                data: data,
+                data: seizuresData,
                 options: {
                     plugins: {
                         title: {
                             display: true,
                             text: 'Seizures over last six months',
                             font: {
-                                size: 5,
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    }
+                }
+            };
+
+            // Sample data for the symptoms chart 
+            const symptomsData = {
+                labels: ['July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Symptoms',
+                    data: [8, 20, 31, 35, 23, 13],
+                    fill: true,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.5
+                }]
+            };
+    
+            const symptomsConfig = {
+                type: 'bar',
+                data: symptomsData,
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Seizures over last six months',
+                            font: {
+                                size: 14,
                                 weight: 'bold'
                             }
                         }
@@ -48,8 +87,38 @@
                 }
             };
     
-            const ctx = document.getElementById('seizures').getContext('2d');
-            new Chart(ctx, config);
+            const ctxSeizures = document.getElementById('seizures').getContext('2d');
+            const ctxSymptoms = document.getElementById('symptoms').getContext('2d');
+            new Chart(ctxSeizures, seizuresConfig);
+            new Chart(ctxSymptoms, symptomsConfig);
     </script>
+    <br />
+
+    <h2 style='position: absolute; top: 400px; left: 5px;'>
+        Medicine
+    </h2>
+
+    <div>
+        <table style='position: absolute; top: 500px; left: 5px;'>
+            <tr>
+                <td>
+                    <div>
+                        <button class="trackbutton">
+                            Every day at 08.00: Trimonil® Retard, Desitin
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <button class="trackbutton">
+                            Every Wednesdag at 13.00: Valproat "Life Medical", Life Medical ApS
+                        </button>
+                    </div>
+                </td>  
+            </tr>
+        </table>
+    </div>
+
+
 </body>
 </html>
