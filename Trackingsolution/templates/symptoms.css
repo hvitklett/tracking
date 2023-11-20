@@ -1,25 +1,78 @@
+*
+{
+    background-color: #F7FAFA;
+    font-family: sans-serif;
+}
+
 h1
 {
     text-align: left;
     color: #08566a;
-    font-family: sans-serif;
     font-size: xx-large;
+    margin-left: 10px;
 }
 
 h2
 {
     text-align: left;
-    color: black;
-    font-family: sans-serif;
+    color: #08566a;
     font-size: medium;
+    margin-top: 50px;
+    margin-left: 10px;
 }
 
 p
 {
-    font-family: sans-serif;
     font-size: medium;
     margin-bottom: 50px;
+    margin-left: 10px;
 }
+
+/* Style for the date label text */
+
+label
+{
+    font-size: 16px;
+    color: #08566a;
+    font-weight: bold; /* Add this line to make the text bold */
+    margin-right: 6px;
+    margin-left: 10px;
+}
+
+/* Add styling for the input */
+
+input
+{
+    padding: 4px;
+    border: 1px solid #08566a;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+/* Add styling for date input */
+#date
+{
+    padding: 3px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+
+#start,
+#stop
+{
+    padding: 3px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
 
 .trackbutton
 {
@@ -28,15 +81,43 @@ p
     min-height: 80px;
     min-width: 120px;
     font-size: xx-large;
-    margin-right: 15px;
-    margin-bottom: 50px;
+    margin-right: 8px;
+    margin-left: 8px;
     background-color:#DDE9EC;
     color: #08566a;
 
 }
 
-.trackbutton:hover 
+.trackbutton:hover
 {
     background-color:#7EAFBC;
-    transition: 0.7s;
+    transition: 0.07s;
 }
+
+.buttontext
+{
+    margin-top: 10px;
+    text-align: center;
+    font-size: small;
+}
+
+#Addtocalenderbutton
+{
+    padding: 5px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-left: 10px;
+    color: #08566a;
+    font-weight: bold;
+}
+
+#Addtocalenderbutton:hover
+{
+    background-color:#DDE9EC;
+    transition: 0.07s; 
+}
+
+
