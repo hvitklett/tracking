@@ -10,6 +10,7 @@ h1
     color: #08566a;
     font-size: xx-large;
     margin-left: 10px;
+    margin-top: 75px;
 }
 
 h2
@@ -26,6 +27,7 @@ p
     font-size: medium;
     margin-bottom: 50px;
     margin-left: 10px;
+    text-align: left;
 }
 
 /* Style for the date label text */
@@ -118,6 +120,18 @@ input
 {
     background-color:#DDE9EC;
     transition: 0.07s; 
+}
+
+/* Blå linje i toppen */
+.top-header
+{
+    width:100%;
+    height: 30px;
+    background: #7EAFBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
 }
 
 
