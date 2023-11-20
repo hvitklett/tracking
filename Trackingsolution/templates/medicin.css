@@ -1,0 +1,98 @@
+*
+{
+    background-color: #F7FAFA;
+    font-family: sans-serif;
+}
+
+.alarmbutton
+{
+    font-size: large;
+    background-color:#DDE9EC;
+    color: #08566a;
+    border-radius: 20px; /* Hvor rundt/forkantet knappen skal være */
+    padding: 15px;
+    min-height: 60px;
+    min-width: 120px;
+    border: 1px solid #08566a;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-bottom: /* tilføj hvad der virker relevant*/
+}
+
+.alarmbutton:hover /*knappen skifter farve, når man tager pilen henover knappen */
+{
+    background-color:#7EAFBC;
+    transition: 0.07s;
+}
+
+.alarmbutton:active /* knappen skifter farve, når man klikker på*/
+{
+    background-color: green;
+}
+
+h2
+{
+    text-align: left;
+    color: #08566a;
+    font-size: x-large;
+    margin-top: 35px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+p
+{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.select-time
+{
+    margin-left: 5px;
+    min-height: 60px;
+    min-width: 130px;
+    color: #08566a;
+    border-radius: 20px; /* Hvor rundt/forkantet knappen skal være */
+}
+
+.select-box
+{
+    background-color: #DDE9EC;
+    color: #08566a;
+    font-size: large;
+    width: 15%; /*længden på knappen*/
+}
+
+.submed
+{
+    background-color: #DDE9EC;
+    color: #08566a;
+    font-size: large;
+    width: 15%; /*længden på knappen*/
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #08566a;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.submed:hover
+{
+    background-color:#7EAFBC;
+    transition: 0.07s;
+}
+
+.medoverview
+{
+    background-color: #DDE9EC;
+    color: #08566a;
+    font-size: large;
+    width: 15%; /*længden på knappen*/
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #08566a;
+    margin-right: 8px;
+    margin-left: 8px;
+}
