@@ -31,13 +31,13 @@
 /* Blå linje i toppen */
 .top-header
 {
-    width:100%;
-    height: 30px;
-    background: #7EAFBC;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0;
+        width: 100%;
+        height: 50px; /* Adjust the height based on your design */
+        background: #7EAFBC;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
 }
 
 /* Logo placering */
