@@ -6,27 +6,42 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
 </head>
 <body>
-    <div class="header">
-        <div class="side-nav">
-            <div class="profile">
-                <img src="images/profile.png" class="profile-img">
+    <div class="header"> <!--Baggrunden-->
+        <!--Navigation menu-->
+        <nav class="side-nav"> <!--Indhold på menu-->
+            <!--Profil info-->
+            <div class="profile"> 
+                <img src="images/lars.png" class="profile-img">
                 <h3>Lars Larsen</h3>
                 <p>lars.larsen@gmail.com</p>
             </div>
-            <ul class="nav-links">
-                <li><a href="#"><p>Symptoms</p></a></li>
-                <li><a href="#"><p>Seizures</p></a></li>
-                <li><a href="#"><p>Medicin Alarm</p></a></li>
-                <li><a href="#"><p>Calender</p></a></li>
-
+            <!--Menu punkter-->
+            <ul class="nav-links"> <!--Erstat # med url, for at like til de specifikke sider. -->
+                <li><a href="#" onclick="changeColor(this)"><p>Overview</p></a></li> <!-- <li> (list item) element is used to define items in a list (unordered list <ul>), and the <a> (anchor) element is used to create hyperlinks. -->
+                <li><a href="#" onclick="changeColor(this)"><p>Symptoms</p></a></li>
+                <li><a href="#" onclick="changeColor(this)"><p>Seizures</p></a></li>
+                <li><a href="#" onclick="changeColor(this)"><p>Medicin Alarm</p></a></li>
+                <li><a href="#" onclick="changeColor(this)"><p>Calender</p></a></li>
             </ul>
-            <a href="#" class="logo">
-                <img src="images/newlogo.png" class="logo-img">
+            <!--logo-->
+            <a href="#" class="logo"> <!--Måske vi kan lave logo om til link, og like til landingpage-->
+                <img src="images/newlogo.png" class="logo-img"> 
             </a>
-        </div>
+        </nav>
+    <!--Den blå kasse/linje i toppen-->
     <div class="top-header"></div>
-
     </div>
-
+    <script>
+        function changeColor(element) {
+            // Fjern 'active' class fra alle links
+            var links = document.querySelectorAll('.nav-links li a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+    
+            // Tilføj 'active' class til det link som brugeren har klikket på
+            element.classList.add('active');
+        }
+    </script>
 </body>
 </html>
