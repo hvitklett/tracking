@@ -11,16 +11,6 @@
     margin-bottom: 5%; 
 }
 
-.top-header
-{
-    width:100%;
-    height: 30px;
-    background: #7EAFBC;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0;
-}
 
 
 .calendar-container h1, p
@@ -38,15 +28,16 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: auto;
-    margin-left: 40%;
+    margin-left: auto;
     margin-right: auto;
-    border-spacing: 50px;
+    border-spacing: auto;
 }
 
 .calendar-container th
 {
     border: 5px solid #0f0e0e;
-    border-width: 5px;
+    background-color:darkgrey;
+    border-width: 1px;
     padding: 5px;
     text-align: center;
     width: 40px; 
@@ -59,8 +50,8 @@
 .calendar-container td
 {
     border: 2px solid  #08566a;
-    border-width: 5px;
-    padding: 5px;
+    border-width: 2px;
+    padding: 25px;
     text-align: center;
     width: 50px; 
     height: 50px; 
