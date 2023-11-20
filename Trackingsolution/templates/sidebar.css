@@ -13,7 +13,7 @@
     width: 100%;
     height: 100vh;
     background: #F7FAFA;
-
+    z-index: 1; /* kan bruges for at placere elementer forand eller bagved andre elementer */
 }
 
 /* Navigations menu */
@@ -31,13 +31,29 @@
 /* Blå linje i toppen */
 .top-header
 {
-        width: 100%;
-        height: 50px; /* Adjust the height based on your design */
-        background: #7EAFBC;
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 0;
+    width:100%;
+    height: 60px;
+    background: #7EAFBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.logo-top-header
+{
+    display: block;
+    margin-bottom: 0px;
+    padding: 5px 5px;
+    bottom: 0;
+    margin-top: 0px;
+}
+
+/* Logo størrelse */
+.logo-img-top-header
+{
+    width: 120px;
 }
 
 /* Logo placering */
@@ -94,10 +110,10 @@
 .profile img
 {
 	display: block;
-    width: 175px;
-	height: 175px;
+    width: 150px;
+	height: 150px;
     border-radius: 50%;
-	margin-top: 75px;
+	margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
