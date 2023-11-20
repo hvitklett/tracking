@@ -3,8 +3,53 @@
 <html lang="en">
     <head>
         <title>Pepsilepsi</title>
+        <link rel="stylesheet" href="symptoms.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     </head>
+
     <body>
-        Hello, epilepsy patient 
-    </body>
+        <h1>Your overview</h1>
+        <br />
+        <div class='seizures-container'style='position: relative; height: 15vh; width:30vw'>
+            <canvas id='seizures' width='400' height='400'></canvas>
+        </div>
+        <script>
+              // Sample data for the "Seizures" chart
+              const data = {
+                labels: ['July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Seizures',
+                    data: [5, 16, 7, 10, 11, 9],
+                    fill: true,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.5
+                }]
+            };
+    
+            const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Seizures over last six months',
+                            font: {
+                                size: 5,
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    }
+                }
+            };
+    
+            const ctx = document.getElementById('seizures').getContext('2d');
+            new Chart(ctx, config);
+    </script>
+</body>
 </html>
