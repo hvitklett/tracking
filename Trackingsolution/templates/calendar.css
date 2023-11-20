@@ -4,6 +4,25 @@
     font-family: sans-serif;
 }
 
+.h1-2
+{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%; 
+}
+
+.top-header
+{
+    width:100%;
+    height: 30px;
+    background: #7EAFBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
 
 .calendar-container h1, p
 {
@@ -51,6 +70,7 @@
 .calendar-container table thead tr:first-child th
  {
     border: 5px solid black;
+    background-color: #7EAFBC;
     padding: 5px;
     text-align: center;
     border-bottom: none;
