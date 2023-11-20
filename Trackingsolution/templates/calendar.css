@@ -1,39 +1,14 @@
 *
 {
-    background-color: whitesmoke;
+    background-color: lightgray;
     font-family: sans-serif;
 }
 
-h1
-{
-    text-align: left;
-    color: #08566a;
-    font-size: xx-large;
-}
-
-h2
-{
-    text-align: left;
-    color: #08566a;
-    font-size: medium;
-    margin-top: 50px;
-}
-
-p
-{
-    font-size: medium;
-    margin-bottom: 50px;
-}
-
-th
-{
-    color: #08566a
-}
 
 .calendar-container h1, p
 {
-    text-align: center;
-    margin-left: 17%;
+    text-align:center;
+    margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
 }
@@ -61,6 +36,8 @@ th
 
 }
 
+
+
 .calendar-container td
 {
     border: 2px solid  #08566a;
@@ -71,6 +48,13 @@ th
     height: 50px; 
 }
 
+.calendar-container table thead tr:first-child th
+ {
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+    border-bottom: none;
+} 
 .calendar-container td:hover {
     background-color: #08566a;
 }
