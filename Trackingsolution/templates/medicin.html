@@ -15,36 +15,105 @@
 
                 <h2>Time of day</h2>
                 <p>Please select the time of day you want to be reminded of your medication:</p>
-<div class="select-time"> <!--select-elementet bruges til at lave en drop-down menu*-->
-    <select class="select-box">
-        <option value="">Select time</option>
-        <option value="1:00 am">1:00 a.m.</option>
-        <option value="2:00 am">2:00 a.m.</option>
-        <option value="3:00 am">3:00 a.m.</option>
-        <option value="4:00 am">4:00 a.m.</option>
-        <option value="5:00 am">5:00 a.m.</option>
-        <option value="6:00 am">6:00 a.m.</option>
-        <option value="7:00 am">7:00 a.m.</option>
-        <option value="8:00 am">8:00 a.m.</option>
-        <option value="9:00 am">9:00 a.m.</option>
-        <option value="10:00 am">10:00 a.m.</option>
-        <option value="11:00 am">11:00 a.m.</option>
-        <option value="12:00 am">12:00 a.m.</option>
 
-        <option value="1:00 pm">1:00 p.m.</option>
-        <option value="2:00 pm">2:00 p.m.</option>
-        <option value="3:00 pm">3:00 p.m.</option>
-        <option value="4:00 pm">4:00 p.m.</option>
-        <option value="5:00 pm">5:00 p.m.</option>
-        <option value="6:00 pm">6:00 p.m.</option>
-        <option value="7:00 pm">7:00 p.m.</option>
-        <option value="8:00 pm">8:00 p.m.</option>
-        <option value="9:00 pm">9:00 p.m.</option>
-        <option value="10:00 pm">10:00 p.m.</option>
-        <option value="11:00 pm">11:00 p.m.</option>
-        <option value="12:00 pm">12:00 p.m.</option>
-    </select>
-</div>
+                    <div class="top-header"></div>
+
+
+
+
+
+    <!-- Date input -->
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" onchange="updateElapsed()">
+
+    <!--Time inputs-->
+
+    <label for="start">Start:</label>
+    <input type="time" id="start" onchange="updateElapsed()"> <!-- The onchange attribute is set to call the updateElapsed function whenever the input values change -->
+
+    <label for="stop">Stop:</label>
+    <input type="time" id="stop" onchange="updateElapsed()">
+
+    <!-- Hidden input to store elapsed time
+    An input element with type "hidden" is used to store the elapsed time in seconds. This can be accessed later for further processing or storage.-->
+    <input type="hidden" id="elapsedTimeInput">
+
+    <!-- Display message for successful time input.  <div> with the id "success" is used to display success messages or error messages.-->
+    <div id="success"></div>
+
+    <!-- JavaScript code -->
+<script>
+// Initialize a variable 'elapsedseconds' to store elapsed time in -->
+let elapsedSeconds = 0;
+
+// Function to update elapsed time.
+// function is called whenever the start or stop time inputs change. It calculates the elapsed time, makes the format, and updates the display and hidden input
+function updateElapsed()
+{
+    // Get references to HTML elements
+    const dateInput = document.getElementById("date");
+    const startTimeInput = document.getElementById("start");
+    const stopTimeInput = document.getElementById("stop");
+    const elapsedTimeInput = document.getElementById("elapsedTimeInput");
+    const successMessage = document.getElementById("success");
+
+    // Combine date and time values
+    const combinedDateTimeString = dateInput.value + "T" + startTimeInput.value + ":00Z";
+
+    // Create a Date object based on the combined date and time string
+    //combinedDateTime are a combination of the values entered by the user in the input field
+    //The values are expected to be in the format. By doing so the time wont need another fixed date to make a Date object
+    const combinedDateTime = new Date(combinedDateTimeString);
+
+    // Calculate elapsed time in seconds plus convert to new date object
+    elapsedSeconds = (new Date(stopTimeInput.value) - combinedDateTime) / 1000;
+
+    // Check if the input is valid (stop time is after start time)
+
+    // Checks if the elapsed time is non-negative, meaning the stopTime is after the combinedDateTime (start time)
+
+    if (elapsedSeconds >= 0) {  //If elapsedSeconds is greater than or equal to 0, it theres a vlid input
+
+        // Convert elapsed time to hours, minutes, and seconds
+        const elapsedMinutes = Math.floor(elapsedSeconds / 60) % 60;
+        const elapsedHours = Math.floor(elapsedSeconds / 3600);
+
+        // Format the elapsed time into a string
+        const formattedTime = `${pad(elapsedHours)}:${pad(elapsedMinutes)}:${pad(Math.floor(elapsedSeconds) % 60)}`;
+
+
+        // Display the formatted time in the success message div
+        successMessage.innerText = `Elapsed Time: ${formattedTime}`;
+        // sets the text content of the "successMessage" element to "Elapsed Time: " followed by the value of formattedTime
+        // This way, user sees a message like "Elapsed Time: 00:00:00
+
+        // Store elapsed time in the hidden input for further processing
+        elapsedTimeInput.value = elapsedSeconds;
+
+    }
+    else
+    {
+        // Handle invalid time input
+        successMessage.innerText = "Invalid time input";
+        elapsedTimeInput.value = ""; // Reset elapsed time if input is invalid
+    }
+}
+
+function pad(value)
+{
+    return value < 10 ? "0" + value : value;
+}
+</script>
+</table>
+
+
+<!--fra linje 22 til linje 108 er tyvstjålet fra Julie fra filen seizures.html//-->
+
+
+
+
+
 
 <h2>Day(s) of the week</h2>
 <p>Please select the day(s) you want to be reminded of your medication:</p>
@@ -66,9 +135,6 @@
 
 <h2>Overview of your medication alarms</h2>
 
-
-
-
 <div>
     <table class="medoverview">
         <tr>
@@ -78,7 +144,7 @@
                     <div>8:00 a.m.</div>
             <td>
                 <div>
-                    <h4>Trimonil® Retard, Desitin</h4>
+                    <h4>Trimonil® wuhulu, Desitin</h4>
                 </div>
             </td>
         </tr>
@@ -88,7 +154,7 @@
                 <div>6:00 p.m.</div>
             </td>
                 <td>
-                    <h4>Valproat "Life Medical", Life Medical ApS</h4>
+                    <h4>Lulz "Life Medzz" dawg4lyfe</h4>
                 </td>
         </tr>
     </table>
