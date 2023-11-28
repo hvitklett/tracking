@@ -1,9 +1,76 @@
+/*Hele siden*/
 *
 {
     background-color: #F7FAFA;
     font-family: sans-serif;
 }
 
+/*Overskriften h1*/
+h1
+{
+    text-align: left;
+    color: #08566a;
+    font-size: xx-large;
+    margin-left: 5px;
+    margin-top: 75px;
+}
+
+
+
+
+
+
+/* Style for the date label text JULIE HJÆLP*/
+
+label
+{
+    font-size: 16px;
+    color: #08566a;
+    font-weight: bold; /* Add this line to make the text bold */
+    margin-right: 6px;
+    margin-left: 10px;
+}
+
+/* Add styling for the input */
+
+input
+{
+    padding: 4px;
+    border: 1px solid #08566a;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+/* Add styling for date input */
+#date
+{
+    padding: 3px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+
+#start,
+#stop
+{
+    padding: 3px;
+    border: 1px solid #B1B1B1;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+/* fra linje 20 til linje 65 er stjålet fra Julie fra filen symptoms.css*/
+
+
+
+
+/*alarmknappen*/
 .alarmbutton
 {
     font-size: large;
@@ -20,17 +87,20 @@
     margin-bottom: /* tilføj hvad der virker relevant*/
 }
 
+/*alarmknappen farveskift, når musen rører*/
 .alarmbutton:hover /*knappen skifter farve, når man tager pilen henover knappen */
 {
     background-color:#7EAFBC;
     transition: 0.07s;
 }
 
-.alarmbutton:active /* knappen skifter farve, når man klikker på*/
+/*alarmknappen farveskift, når man klikker på knappen*/
+.alarmbutton:active
 {
     background-color: green;
 }
 
+/*Alle underoverskrifter*/
 h2
 {
     text-align: left;
@@ -41,6 +111,7 @@ h2
     margin-bottom: 2px;
 }
 
+/*Alt brødtekst*/
 p
 {
     margin-bottom: 30px;
@@ -48,23 +119,7 @@ p
     margin-left: 5px;
 }
 
-.select-time
-{
-    margin-left: 5px;
-    min-height: 60px;
-    min-width: 130px;
-    color: #08566a;
-    border-radius: 20px; /* Hvor rundt/forkantet knappen skal være */
-}
-
-.select-box
-{
-    background-color: #DDE9EC;
-    color: #08566a;
-    font-size: large;
-    width: 15%; /*længden på knappen*/
-}
-
+/*submit knappen*/
 .submed
 {
     background-color: #DDE9EC;
@@ -78,21 +133,35 @@ p
     margin-left: 8px;
 }
 
+/*submit knappen farveskift, når musen rører*/
 .submed:hover
 {
     background-color:#7EAFBC;
     transition: 0.07s;
 }
 
+/*skemaet for medicinen og påmindelserne*/
 .medoverview
 {
     background-color: #DDE9EC;
     color: #08566a;
     font-size: large;
-    width: 15%; /*længden på knappen*/
+    width: 95%; /*længden på knappen*/
     border-radius: 20px;
     padding: 15px;
     border: 1px solid #08566a;
     margin-right: 8px;
     margin-left: 8px;
+    text-align: center;
+}
+
+.top-header
+{
+    width:100%;
+    height: 30px;
+    background: #7EAFBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
 }
