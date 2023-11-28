@@ -1,5 +1,4 @@
 from flask import Flask, redirect, render_template, request #Makes it posible to use templates
-from cs50 import SQL
 
 app = Flask (__name__) #serving app from this file
 db = SQL("sqlite:///database.db") #Give access to database
