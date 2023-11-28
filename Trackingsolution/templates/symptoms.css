@@ -1,9 +1,11 @@
+/*Hele siden*/
 *
 {
     background-color: #F7FAFA;
     font-family: sans-serif;
 }
 
+<<<<<<< HEAD
 body
 {
     margin: 0;
@@ -15,6 +17,9 @@ table
     margin-left: 300px;
 }
 
+=======
+/*Overskriften h1*/
+>>>>>>> 8a9fa7c58b6a21177ce1aa21dabc8462a9ea0389
 h1
 {
     text-align: left;
@@ -24,6 +29,7 @@ h1
     margin-top: 75px;
 }
 
+/*Alle underoverskrifter h2*/
 h2
 {
     text-align: left;
@@ -34,6 +40,7 @@ h2
     margin-left: 300px;
 }
 
+/*Alt brødtekst*/
 p
 {
     font-size: medium;
@@ -42,8 +49,7 @@ p
     text-align: left;
 }
 
-/* Style for the date label text */
-
+/*Dato blokken*/
 label
 {
     font-size: 16px;
@@ -53,7 +59,7 @@ label
     margin-left: 300px;
 }
 
-/* Add styling for the input */
+/* Add styling for the input- JUlIE HJÆLP */
 
 input
 {
@@ -64,7 +70,7 @@ input
     font-size: 10px;
 }
 
-/* Add styling for date input */
+/* Add styling for date input - JULIE HJÆLP*/
 #date
 {
     padding: 3px;
@@ -75,7 +81,7 @@ input
     margin-right: 20px;
 }
 
-
+/*JULIE HJÆLP (beskriv hvad der ændres i her)*/
 #start,
 #stop
 {
@@ -87,7 +93,7 @@ input
     margin-right: 8px;
 }
 
-
+/*Alle trackingknapper i symptoms og seizures*/
 .trackbutton
 {
     border: 1px solid #08566a;
@@ -102,12 +108,14 @@ input
 
 }
 
+/*trackingknap farveskift når musen rører*/
 .trackbutton:hover
 {
     background-color:#7EAFBC;
     transition: 0.07s;
 }
 
+/*Beskrivelse under trackingknapper*/
 .buttontext
 {
     margin-top: 10px;
@@ -115,6 +123,7 @@ input
     font-size: small;
 }
 
+/*Tilføj til kalenderknap*/
 #Addtocalenderbutton
 {
     padding: 5px;
@@ -128,6 +137,7 @@ input
     font-weight: bold;
 }
 
+/*Kalenderknap farveskift når musen rører*/
 #Addtocalenderbutton:hover
 {
     background-color:#DDE9EC;
