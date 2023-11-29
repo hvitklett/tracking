@@ -5,7 +5,9 @@
     font-family: sans-serif;
 }
 
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
+/*Overskriften h1*/
+=========
 body
 {
     margin: 0;
@@ -17,9 +19,7 @@ table
     margin-left: 300px;
 }
 
-=======
-/*Overskriften h1*/
->>>>>>> 8a9fa7c58b6a21177ce1aa21dabc8462a9ea0389
+>>>>>>>>> Temporary merge branch 2
 h1
 {
     text-align: left;
