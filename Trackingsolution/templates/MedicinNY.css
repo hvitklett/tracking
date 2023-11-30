@@ -1,0 +1,137 @@
+/*Hele siden*/
+*
+{
+    background-color: #F7FAFA;
+    font-family: sans-serif;
+}
+
+/*Overskriften h1*/
+h1
+{
+    text-align: left;
+    color: #08566a;
+    font-size: xx-large;
+    margin-left: 5px;
+    margin-top: 75px;
+}
+
+/*alarmknappen*/
+.alarmbutton
+{
+    font-size: large;
+    background-color:#DDE9EC;
+    color: #08566a;
+    border-radius: 20px; /* Hvor rundt/forkantet knappen skal være */
+    padding: 15px;
+    min-height: 60px;
+    min-width: 120px;
+    border: 1px solid #08566a;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-bottom: 60px;
+}
+
+/*alarmknappen farveskift, når musen rører*/
+.alarmbutton:hover /*knappen skifter farve, når man tager pilen henover knappen */
+{
+    background-color:#7EAFBC;
+    transition: 0.07s;
+}
+
+/*alarmknappen farveskift, når man klikker på knappen*/
+.alarmbutton:active
+{
+    background-color: green;
+}
+
+/*Alle underoverskrifter*/
+h2
+{
+    text-align: left;
+    color: #08566a;
+    font-size: x-large;
+    margin-top: 35px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+/*Alt brødtekst*/
+p
+{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+/*submit knappen*/
+.submed
+{
+    background-color: #DDE9EC;
+    color: #08566a;
+    font-size: large;
+    width: 15%; /*længden på knappen*/
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #08566a;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+/*submit knappen farveskift, når musen rører*/
+.submed:hover
+{
+    background-color:#7EAFBC;
+    transition: 0.07s;
+}
+
+.submed:active
+{
+    background-color: green;
+}
+
+.Userinput
+{
+    background-color: #DDE9EC;
+    color: #08566a;
+    font-size: large;
+    margin-bottom: 100px;
+    padding: 5px;
+    margin-right: 8px;
+    margin-left: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/*skemaet for medicinen og påmindelserne*/
+.medoverview
+{
+    background-color: #DDE9EC;
+    color: #08566a;
+    font-size: large;
+    width: 95%; /*længden på knappen*/
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #08566a;
+    margin-right: 8px;
+    margin-left: 8px;
+    text-align: center;
+}
+
+.top-header
+{
+    width:100%;
+    height: 30px;
+    background: #7EAFBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+/*mellemrum mellem inputsene*/
+form {
+    margin-bottom: 50px;
+}

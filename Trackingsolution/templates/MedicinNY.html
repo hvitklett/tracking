@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Medicin</title>
+    <link rel="stylesheet" href="harrystyles-medicin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h1>Your Medicin</h1>
+    <p>Keep track of your medicin on this site.</p>
+
+    <button class="alarmbutton" id="addAlarmKnap">+ Add alarm</button> <!--id=addAlarmknap gør, at javascript koden kan referer tilbage til dem-->
+
+    <div id="alarmForm" style="display: none;">
+
+
+    <script> //Denne kode i script skal jeg lige selv forstå bedre ved at skrive bedre kommentare, men det er javascript.
+        // Her hentes der referencer til HTML-elementer
+        const addAlarmKnap = document.getElementById("addAlarmKnap");
+        const alarmForm = document.getElementById("alarmForm");
+
+        // Tilføjer en "aktion/lytter" handling, som sker når der klikkes
+        addAlarmKnap.addEventListener("click", function() {
+            // Valgmulighederne kommer frem, når knappen klikkes og vice versa
+            //Funktionen, der udføres ved klik, tjekker om alarmForm er skjult eller vist. Hvis den er skjult, ændres dens stil til at blive vist. Hvis den allerede er vist, ændres stilen til at blive skjult
+            if (alarmForm.style.display === "none") {
+                alarmForm.style.display = "block";
+            } else {
+                alarmForm.style.display = "none";
+            }
+        });
+    </script>
+
+
+
+    <form id="userAlarmForm">
+        <label for="weekday" class="Userinput">Choose a day:</label>
+        <input type="day" id="weekday" required>
+
+        <label for="alarmTime" class="Userinput">Choose a time:</label>
+        <input type="time" id="alarmTime" required>
+
+        <label for="medicineName" class="Userinput">Medicine name:</label>
+        <input type="text" id="medicineName" required>
+
+        <input class="submed" class="alarmbutton:active" type="submit" value="Create Alarm">
+    </form>
+</div>
+
+<div id="userChoices">
+    <h2>Overview of your medication alarms</h2>
+    <ul id="alarmList"></ul>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() { //betyder, at Document Object Model er blevet indlæst, og alt indhold er klar til at blive interargeret med
+        const userAlarmForm = document.getElementById('userAlarmForm'); //disse to linjer henter referencer til HTML-elementer ved hjælp af deres id'er, som tidligere er blevet defineret
+        const alarmList = document.getElementById('alarmList');
+
+        userAlarmForm.addEventListener('submit', function(event) { //Dette er en event-lytter, og her lytter den efter, at brugeren har indsendt formularen (klikket submit) inde i userAlarmForm. Når formularen indsendes, udføres denne tilknyttede funktion.
+            event.preventDefault(); //dette sørger for, at siden ikke bliver genindlæst lige så snart at formularen er submittet
+
+            const weekday = document.getElementById('weekday').value; //De tre linjer her henter værdierne fra inputfelterne i formularen ved at bruge deres id'er. weekday, alarmTime og medicineName indeholder nu de værdier, som brugeren har indtastet i de tilsvarende inputfelter.
+            const alarmTime = document.getElementById('alarmTime').value;
+            const medicineName = document.getElementById('medicineName').value;
+
+            // Opret et nyt listeelement for brugerens valg, som er ugedag, tidspunkt og medicinnavn
+            const listItem = document.createElement('li');
+            listItem.textContent = `Day(s): ${weekday}, Time: ${alarmTime}, Medicine: ${medicineName}`;
+
+            // Det er her, hvor de valgte alarmer vises
+            alarmList.appendChild(listItem);
+
+        });
+    });
+</script>
+
+
+</body>
+</html>
