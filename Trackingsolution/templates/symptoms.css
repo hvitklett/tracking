@@ -5,9 +5,7 @@
     font-family: sans-serif;
 }
 
-<<<<<<<<< Temporary merge branch 1
 /*Overskriften h1*/
-=========
 body
 {
     margin: 0;
@@ -19,7 +17,6 @@ table
     margin-left: 300px;
 }
 
->>>>>>>>> Temporary merge branch 2
 h1
 {
     text-align: left;
@@ -113,6 +110,11 @@ input
 {
     background-color:#7EAFBC;
     transition: 0.07s;
+}
+
+.trackbutton.active
+{
+    background-color:#7EAFBC;
 }
 
 /*Beskrivelse under trackingknapper*/

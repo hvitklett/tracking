@@ -16,31 +16,31 @@
                 <table>
                     <tr>
                         <td>
-                            <div><button class="trackbutton">😄</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😄</button></div>
                             <div class="buttontext">Very Happy</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😊</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😊</button></div>
                             <div class="buttontext">Happy</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🙂</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🙂</button></div>
                             <div class="buttontext">Content</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😔</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😔</button></div>
                             <div class="buttontext">Sad</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😵‍💫</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😵‍💫</button></div>
                             <div class="buttontext">Disoriented</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🤯</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🤯</button></div>
                             <div class="buttontext">Overwhelmed</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😡</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😡</button></div>
                             <div class="buttontext">Frustrated</div>
                         </td>
                     </tr>
@@ -51,23 +51,23 @@
                 <table>
                     <tr>
                         <td>
-                            <div><button class="trackbutton">> 8</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">> 8</button></div>
                             <div class="buttontext">Eight hours or more</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">7</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">7</button></div>
                             <div class="buttontext">Seven hours</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">6</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">6</button></div>
                             <div class="buttontext">Six hours</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">5</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">5</button></div>
                             <div class="buttontext">Five hours</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">4 <</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">4 <</button></div>
                             <div class="buttontext">Four hours or less</div>
                         </td>
                     </tr>
@@ -78,27 +78,27 @@
                 <table>
                     <tr>
                         <td>
-                            <div><button class="trackbutton">🤩</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🤩</button></div>
                             <div class="buttontext">Energetic</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🤗</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🤗</button></div>
                             <div class="buttontext">Content</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😊</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😊</button></div>
                             <div class="buttontext">Mild Fatigue</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😐</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😐</button></div>
                             <div class="buttontext">Moderate Fatigue</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🥱</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🥱</button></div>
                             <div class="buttontext">Severe Fatigue</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">😴</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">😴</button></div>
                             <div class="buttontext">Exhausted</div>
                         </td>
                     </tr>
@@ -109,23 +109,38 @@
                 <table>
                     <tr>
                         <td>
-                            <div><button class="trackbutton">🟢</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🟢</button></div>
                             <div class="buttontext">Mild</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🟡</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🟡</button></div>
                             <div class="buttontext">Moderate</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🟠</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🟠</button></div>
                             <div class="buttontext">Severe</div>
                         </td>
                         <td>
-                            <div><button class="trackbutton">🔴</button></div>
+                            <div><button class="trackbutton" onclick="changeColor(this)">🔴</button></div>
                             <div class="buttontext">Very severe</div>
                         </td>
                     </tr>
                 </table>
             </div>
+            <script>
+                function changeColor(element) {
+                    // Get the parent row of the clicked button
+                    var row = element.closest('tr');
+
+                    // Remove 'active' class from all buttons within the same row
+                    var buttonsInRow = row.querySelectorAll('.trackbutton');
+                    buttonsInRow.forEach(function (button) {
+                        button.classList.remove('active');
+                    });
+
+                    // Add 'active' class to the clicked button
+                    element.classList.add('active');
+                }
+            </script>
     </body>
 </html>
